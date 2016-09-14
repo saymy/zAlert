@@ -1,0 +1,100 @@
+.clearfix {
+          *zoom: 1;
+}
+.clearfix:after {
+          content: "\200B";
+          display: block;
+          height: 0;
+          clear: both;
+          overflow: hidden;
+}
+        
+        
+.zAlert_box{
+    font-family: "\5FAE\8F6F\96C5\9ED1" , "\9ED1\4F53", "\5B8B\4F53", "\65B0\5B8B\4F53",tahoma,arial;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10000;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);          
+      * 针对IE8以下背景，需手动加入min.css中，less不能编译
+      * startColorstr、endColorstr的值#号后两位数字符表示透明度，对应值为0.1-19/0.2-33/0.3-4C/0.4-66/0.5-7F/0.6-99/0.7-B2/0.8-C8/0.9-E5
+      * 之后6位字符表示16进制颜色值      
+    */
+    div,p {margin: 0; border: 0;}
+    
+    .popup{
+        width:80%;
+        left:10%;
+        border-radius:5px;
+        top:45%;
+        position:absolute;
+        box-shadow: 1px 1px 20px rgba(0,0,0,.3);
+    }
+    .actin{
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-name: bounceIn;
+        animation-name: bounceIn;
+    }
+    @-webkit-keyframes bounceIn {
+        0%{opacity:0;-webkit-transform:scale(.5);transform:scale(.5)}
+        100%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}
+    }
+    @keyframes bounceIn{
+        0%{opacity:0;-webkit-transform:scale(.5);-ms-transform:scale(.5);transform:scale(.5)}
+        100%{opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)};
+    }
+    .actout{
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+        -webkit-animation-name: bounceOut;
+        animation-name: bounceOut;
+    }
+    @-webkit-keyframes bounceOut {
+        0%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}
+        100%{opacity:0;-webkit-transform:scale(.5);transform:scale(.5)}
+    }
+    @keyframes bounceOut{
+        0%{opacity:1;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+        100%{opacity:0;-webkit-transform:scale(.5);-ms-transform:scale(.5);transform:scale(.5)};
+    }    
+    
+    .bg_fff {background-color: #fff !important;}
+    .align_c{text-align: center;}
+    .font16{font-size:16px !important;}
+    .popup .pp_hint{padding:30px; color:#555555;}
+    .popup .vf_bdr_b_e4{border-bottom: 1px solid #e4e4e4;}
+    .pt_12 {padding-top: 12px;}
+    .pb_15 {padding-bottom: 15px;}
+    .ofh {overflow: hidden;}
+    .popup .pp_btn{
+        width: 50%;        
+        display: inline-block;
+        float: left;
+        color: #666;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .popup .pp_btn100{
+        width: 100%;        
+        display: inline-block;
+        float: left;
+        color: #666;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .popup .pp_btn0{        
+        display: none;
+    }         
+    .popup .sure{color: #06bd04;}
+    .popup .cancel{color: #666;}    
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!--<link rel="stylesheet" type="text/css" href="css/reset.css" media="all">-->
+<link rel="stylesheet" type="text/css" href="dist/css/zAlert.min.css" media="all">
+<script src="dist/js/zAlert.js"></script>	
+<title></title>
+</head>
+<body>
+<!--<div id="zAlert_box">
+	<div class="popup bg_fff align_c font16">
+		<p class="pp_hint vf_bdr_b_e4">返回后将取消此次提现</p>
+		<div class="pt_20 pb_20 ofh">
+			<span class="pp_btn on">继续提现</span>
+			<span href="###" class="pp_btn">取消</span>
+		</div>
+	</div>
+</div>-->
+	<button id="haha" onclick="haha()">弹出信息</button>
+	<input id="inputn" onkeydown="haha()" placeholder="输入">
+	
+	<div style="height: 1920px; border: 3px solid #000088;"></div>
+	<script>
+		function haha(){
+			zAlert({
+	        	msg:'zAlert弹窗信息',
+	        	sureBtnText:'确定',
+	        	//cancelBtnText:'取消',
+	        	sureBtnShow:true,
+	        	cancelBtnShow:false,
+	        	//toclose:true,
+	        	//time:2000,
+	        	sureCallback:function(){ 
+		        	console.log("点击了确定");
+		        }
+		        //cancelCallback:function(){
+		        //	console.log("点击了取消");
+		        //}
+			});
+		}
+		
+	</script>
+</body>
+</html>
